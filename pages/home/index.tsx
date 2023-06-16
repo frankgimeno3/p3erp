@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import Link from "next/link";
+import Fichas from "../../components/Fichas/Fichas"
+import Notificaciones from "../../components/Notificaciones/Notificaciones"
+import Utilidades from "../../components/Utilidades/Utilidades"
+
 
 const Home: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('notifications');
@@ -8,11 +13,11 @@ const Home: React.FC = () => {
   };
 
   const renderComponent = () => {
-    if (selectedTab === 'notifications') {
+    if (selectedTab === 'NotificacionesComoponent') {
       return <Notificaciones />;
     } else if (selectedTab === 'fichas') {
       return <FichasClientes />;
-    } else if (selectedTab === 'utilidades') {
+    } else if (selectedTab === 'UtilidadesComponent') {
       return <Utilidades />;
     }
     return null;
@@ -24,9 +29,9 @@ const Home: React.FC = () => {
         <div>
           <button
             className={`rounded-lg px-4 py-2 ${
-              selectedTab === 'notifications' ? 'bg-gray-300 text-gray-900' : ''
+              selectedTab === 'NotificacionesComoponent' ? 'bg-white text-gray-900' : ''
             }`}
-            onClick={() => handleTabChange('notifications')}
+            onClick={() => handleTabChange('NotificacionesComoponent')}
           >
             Notificaciones
           </button>
@@ -34,7 +39,7 @@ const Home: React.FC = () => {
         <div>
           <button
             className={`rounded-lg px-4 py-2 ${
-              selectedTab === 'fichas' ? 'bg-gray-300 text-gray-900' : ''
+              selectedTab === 'fichas' ? 'bg-white text-gray-900' : ''
             }`}
             onClick={() => handleTabChange('fichas')}
           >
@@ -42,33 +47,33 @@ const Home: React.FC = () => {
           </button>
           <button
             className={`rounded-lg px-4 py-2 ${
-              selectedTab === 'utilidades' ? 'bg-gray-300 text-gray-900' : ''
+              selectedTab === 'UtilidadesComponent' ? 'bg-white text-gray-900' : ''
             }`}
-            onClick={() => handleTabChange('utilidades')}
+            onClick={() => handleTabChange('UtilidadesComponent')}
           >
             Utilidades
           </button>
+          <Link href={"/"}>
           <button className="rounded-lg px-4 py-2">Cerrar Sesión</button>
+          </Link>
         </div>
       </nav>
-      <div className="flex justify-center items-center h-screen">
-        <h1 className="text-4xl text-center">Bienvenido, Usuario!</h1>
-      </div>
+
       <div>{renderComponent()}</div>
     </div>
   );
 };
 
-const Notificaciones: React.FC = () => {
-  return <div>Componente de Notificaciones</div>;
+const NotificacionesComoponent: React.FC = () => {
+  return <Notificaciones/>;
 };
 
 const FichasClientes: React.FC = () => {
-  return <div>Componente de Fichas de Clientes</div>;
+  return <Fichas/>;
 };
 
-const Utilidades: React.FC = () => {
-  return <div>Componente de Utilidades</div>;
+const UtilidadesComponent: React.FC = () => {
+  return <Utilidades/>;
 };
 
 export default Home;

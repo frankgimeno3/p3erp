@@ -8,7 +8,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>Proporcion3</title>
-        <link rel="icon" href="/icons/favicon.jpg" />
+        <link rel="icon" href="/icons/p3logo.png" />
       </Head>
       <Layout title="Proporcion3">
         <Component {...pageProps} />

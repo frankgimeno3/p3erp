@@ -3,6 +3,7 @@ import Link from "next/link";
 import Fichas from "../../components/Fichas/Fichas"
 import Notificaciones from "../../components/Notificaciones/Notificaciones"
 import Utilidades from "../../components/Utilidades/Utilidades"
+import Produccion from "../../components/Produccion/Produccion"
 
 const Home: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('notifications');
@@ -18,6 +19,8 @@ const Home: React.FC = () => {
       return <FichasClientes />;
     } else if (selectedTab === 'UtilidadesComponent') {
       return <Utilidades />;
+    } else if (selectedTab === 'ProduccionComponent') {
+      return <Produccion />;
     }
     return null;
   };
@@ -52,6 +55,14 @@ const Home: React.FC = () => {
           >
             Utilidades
           </button>
+          <button
+            className={`rounded-lg px-4 py-2 ${
+              selectedTab === 'ProduccionComponent' ? 'bg-white text-gray-900' : ''
+            }`}
+            onClick={() => handleTabChange('ProduccionComponent')}
+          >
+            Producción
+          </button>
           <Link href={"/"}>
             <button className="rounded-lg px-4 py-2">Cerrar Sesión</button>
           </Link>
@@ -73,6 +84,10 @@ const FichasClientes: React.FC = () => {
 
 const UtilidadesComponent: React.FC = () => {
   return <Utilidades/>;
+};
+
+const ProduccionComponent: React.FC = () => {
+  return <Produccion/>;
 };
 
 export default Home;

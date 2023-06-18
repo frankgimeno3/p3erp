@@ -4,7 +4,6 @@ import Fichas from "../../components/Fichas/Fichas"
 import Notificaciones from "../../components/Notificaciones/Notificaciones"
 import Utilidades from "../../components/Utilidades/Utilidades"
 
-
 const Home: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('notifications');
 
@@ -25,7 +24,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <nav className="flex justify-between bg-black text-white p-4">
+      <nav className="fixed top-0 left-0 right-0 flex justify-between bg-black text-white p-4">
         <div>
           <button
             className={`rounded-lg px-4 py-2 ${
@@ -54,7 +53,7 @@ const Home: React.FC = () => {
             Utilidades
           </button>
           <Link href={"/"}>
-          <button className="rounded-lg px-4 py-2">Cerrar Sesión</button>
+            <button className="rounded-lg px-4 py-2">Cerrar Sesión</button>
           </Link>
         </div>
       </nav>

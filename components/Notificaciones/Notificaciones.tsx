@@ -4,7 +4,7 @@ import TarjetaNotificacion from "./TarjetaNotificacion";
 export default function Notificaciones() {
   return (
     <div>
-      <div className="bg-white px-20">
+      <div className="bg-white px-20 mt-20">
         <h1 className="text-5xl px-10 pt-5">
           Bienvenido, <span className="font-bold">usuario</span>
         </h1>

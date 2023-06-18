@@ -13,11 +13,9 @@ export default function Fichas() {
         <button className="py-1 px-5 mt-2 ml-5 bg-gray-50 text-black">
           Crear Nueva Ficha
         </button>
+        
         <button className="py-1 px-5 mt-2 ml-5 bg-gray-50 text-black">
-          Modificar
-        </button>
-        <button className="py-1 px-5 mt-2 ml-5 bg-gray-50 text-black">
-          Exportar
+          Exportar un listado
         </button>
       </div>
       <div className="flex flex-col ml-20">

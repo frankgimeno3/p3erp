@@ -38,7 +38,15 @@ export default function Utilidades() {
                 Descripción de otra herramienta.
               </td>
             </tr>
-            {/* Agrega aquí más filas siguiendo el mismo patrón */}
+            {/* Nueva fila */}
+            <tr>
+              <td className="border border-gray-300 p-2">
+                <button>Herramientas para ventas</button>
+              </td>
+              <td className="border border-gray-300 p-2">
+                Descripción de las herramientas para ventas.
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

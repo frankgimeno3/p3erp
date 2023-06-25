@@ -44,7 +44,7 @@ export default function Utilidades() {
                 <button>Herramientas para ventas</button>
               </td>
               <td className="border border-gray-300 p-2">
-                Herramientas para la automatización de campañas
+                Herramientas para gestión de ofertas, y otras herramientas para ventas
               </td>
             </tr>
             <tr>

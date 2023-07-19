@@ -9,7 +9,7 @@ export default function Fichas() {
   };
 
   return (
-    <div className="flex flex-row bg-white mt-10 pt-8">
+    <div className="flex flex-row bg-white mt-14 pt-1">
       <Navutilidades />
       <div className="ml-24 pl-24 h-screen">
         <div className="flex p-5 flex-row justify-end">

@@ -25,13 +25,13 @@ export default function Fichas() {
           <div className="p-5">
             <h1 className="text-3xl mb-4">Fichas de Clientes</h1>
             <form className="flex">
-              <div className="relative">
+              <div className="flex flex-row w-full">
                 <input
                   type="text"
-                  placeholder="Busque por nombre de empresa"
-                  className="border border-gray-400 pr-20 p-2 w-72"
+                  placeholder="Busque por nombre de empresa "
+                  className="border border-gray-400 pr-20 p-2 w-full"
                 />
-                <button className="absolute right-0 top-0 h-full px-4 bg-black text-white">
+                <button className=" h-full px-4 bg-black text-white">
                   Buscar
                 </button>
               </div>

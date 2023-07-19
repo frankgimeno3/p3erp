@@ -27,10 +27,10 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 flex justify-between bg-black text-white p-4">
+      <nav className="fixed top-0 left-0 right-0 flex justify-between bg-black text-white p-4 text-sm">
         <div>
           <button
-            className={`rounded-lg px-4 py-2 ${
+            className={`rounded-lg px-4 py-1 ${
               selectedTab === 'NotificacionesComoponent' ? 'bg-white text-gray-900' : ''
             }`}
             onClick={() => handleTabChange('NotificacionesComoponent')}
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
         </div>
         <div>
           <button
-            className={`rounded-lg px-4 py-2 ${
+            className={`rounded-lg px-4 py-1 ${
               selectedTab === 'fichas' ? 'bg-white text-gray-900' : ''
             }`}
             onClick={() => handleTabChange('fichas')}
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             Fichas de clientes
           </button>
           <button
-            className={`rounded-lg px-4 py-2 ${
+            className={`rounded-lg px-4 py-1 ${
               selectedTab === 'UtilidadesComponent' ? 'bg-white text-gray-900' : ''
             }`}
             onClick={() => handleTabChange('UtilidadesComponent')}
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
             Utilidades
           </button>
           <button
-            className={`rounded-lg px-4 py-2 ${
+            className={`rounded-lg px-4 py-1 ${
               selectedTab === 'ProduccionComponent' ? 'bg-white text-gray-900' : ''
             }`}
             onClick={() => handleTabChange('ProduccionComponent')}
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
             Producción
           </button>
           <Link href={"/"}>
-            <button className="rounded-lg px-4 py-2">Cerrar Sesión</button>
+            <button className="rounded-lg px-4 py-1">Cerrar Sesión</button>
           </Link>
         </div>
       </nav>

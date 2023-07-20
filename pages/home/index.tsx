@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import Link from "next/link";
-import Fichas from "../../components/Fichas/Fichas"
-import Notificaciones from "../../components/Notificaciones/Notificaciones"
-import Utilidades from "../../components/Utilidades/Utilidades"
-import Produccion from "../../components/Produccion/Produccion"
+import Fichas from "../../components/Fichas/Fichas";
+import Notificaciones from "../../components/Notificaciones/Notificaciones";
+import Utilidades from "../../components/Utilidades/Utilidades";
+import Produccion from "../../components/Produccion/Produccion";
 
 const Home: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState('notifications');
+  // Set the initial state to 'notifications' to mark the 'Notificaciones' button by default.
+  const [selectedTab, setSelectedTab] = useState('notificaciones');
 
   const handleTabChange = (tab: string) => {
     setSelectedTab(tab);
   };
 
   const renderComponent = () => {
-    if (selectedTab === 'NotificacionesComoponent') {
+    if (selectedTab === 'notificaciones') { // Corrected the value here
       return <Notificaciones />;
     } else if (selectedTab === 'fichas') {
       return <FichasClientes />;
-    } else if (selectedTab === 'UtilidadesComponent') {
+    } else if (selectedTab === 'utilidades') { // Corrected the value here
       return <Utilidades />;
-    } else if (selectedTab === 'ProduccionComponent') {
+    } else if (selectedTab === 'produccion') { // Corrected the value here
       return <Produccion />;
     }
     return null;
@@ -31,9 +32,9 @@ const Home: React.FC = () => {
         <div>
           <button
             className={`rounded-lg px-4 py-1 ${
-              selectedTab === 'NotificacionesComoponent' ? 'bg-white text-gray-900' : ''
+              selectedTab === 'notifications' ? 'bg-white text-gray-900' : ''
             }`}
-            onClick={() => handleTabChange('NotificacionesComoponent')}
+            onClick={() => handleTabChange('notificaciones')}
           >
             Notificaciones
           </button>
@@ -49,17 +50,17 @@ const Home: React.FC = () => {
           </button>
           <button
             className={`rounded-lg px-4 py-1 ${
-              selectedTab === 'UtilidadesComponent' ? 'bg-white text-gray-900' : ''
+              selectedTab === 'utilidades' ? 'bg-white text-gray-900' : ''
             }`}
-            onClick={() => handleTabChange('UtilidadesComponent')}
+            onClick={() => handleTabChange('utilidades')}
           >
             Utilidades
           </button>
           <button
             className={`rounded-lg px-4 py-1 ${
-              selectedTab === 'ProduccionComponent' ? 'bg-white text-gray-900' : ''
+              selectedTab === 'produccion' ? 'bg-white text-gray-900' : ''
             }`}
-            onClick={() => handleTabChange('ProduccionComponent')}
+            onClick={() => handleTabChange('produccion')}
           >
             Producción
           </button>
@@ -74,20 +75,16 @@ const Home: React.FC = () => {
   );
 };
 
-const NotificacionesComoponent: React.FC = () => {
-  return <Notificaciones/>;
-};
-
 const FichasClientes: React.FC = () => {
-  return <Fichas/>;
+  return <Fichas />;
 };
 
 const UtilidadesComponent: React.FC = () => {
-  return <Utilidades/>;
+  return <Utilidades />;
 };
 
 const ProduccionComponent: React.FC = () => {
-  return <Produccion/>;
+  return <Produccion />;
 };
 
 export default Home;

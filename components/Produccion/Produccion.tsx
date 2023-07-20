@@ -6,8 +6,9 @@ export default function Produccion() {
       <div className="flex flex-row">
         <Navproduccion />
         <div className="ml-20 w-full h-screen">
-          <div className="flex flex-col pl-24 ml-24 bg-white w-full h-full">
-            <h1 className="text-3xl pt-5">Produccion</h1>
+          <div className="flex flex-col pl-24 ml-24 bg-gray-400 bg-opacity-75 0w-full h-full">
+            <div className="bg-white mt-5 mr-24 pt-5 pl-10">
+            <h1 className="text-3xl ">Produccion</h1>
             <h2 className="pb-10">
               En esta página encontrarás diferentes herramientas para producción
             </h2>
@@ -61,7 +62,7 @@ export default function Produccion() {
                 </tbody>
               </table>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </div>

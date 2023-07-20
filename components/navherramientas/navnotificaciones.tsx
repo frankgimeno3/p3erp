@@ -13,27 +13,29 @@ export default function Navnotificaciones() {
       </div>
       <hr className="mt-5"/>
       <div className=" flex flex-col">
-        <h2 className="text-white pl-4 mt-5 text-sm">Opciones para <span className="font-bold">Fichas de clientes</span></h2>
+        <h2 className="text-white pl-4 mt-5 text-sm">Opciones para <span className="font-bold">Notificaciones</span></h2>
         <div className="flex flex-row bg-white bg-opacity-20 my-5">
           <div className="bg-white px-1 "></div>
           <button className="bg-white bg-opacity-25 text-sm w-full py-1 text-white text-left pl-5 hover:font-bold">
-            Buscar fichas de clientes
+          Ordenar por empresa
           </button>
         </div>
         <div className="flex flex-row bg-white bg-opacity-20">
           <div className="bg-white px-1 "></div>
           <button className="bg-white bg-opacity-25 text-sm w-full py-1 text-white text-left pl-5 hover:font-bold">
-          Crear Nueva Ficha
+          Ordenar por fecha y hora
           </button>
           </div>
 
           <div className="flex flex-row bg-white bg-opacity-20 my-5">
           <div className="bg-white px-1 "></div>
           <button className="bg-white bg-opacity-25 text-sm w-full py-1 text-white text-left pl-5 hover:font-bold">
-          Exportar un listado
+          Ver historial completo
           </button>
         </div>
       </div>
     </div>
   );
 }
+
+ 

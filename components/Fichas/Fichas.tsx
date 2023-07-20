@@ -12,18 +12,10 @@ export default function Fichas() {
     <div className="flex flex-row bg-white mt-14 pt-1">
       <Navutilidades />
       <div className="ml-24 pl-24 h-screen">
-        <div className="flex p-5 flex-row justify-end">
-          <button className="py-1 px-5 mt-2 ml-5 bg-gray-50 text-black">
-            Crear Nueva Ficha
-          </button>
-
-          <button className="py-1 px-5 mt-2 ml-5 bg-gray-50 text-black">
-            Exportar un listado
-          </button>
-        </div>
+  
         <div className="flex flex-col ml-20">
           <div className="p-5">
-            <h1 className="text-3xl mb-4">Fichas de Clientes</h1>
+            <h1 className="text-3xl mb-4 mt-2">Fichas de Clientes</h1>
             <form className="flex">
               <div className="flex flex-row w-full">
                 <input
